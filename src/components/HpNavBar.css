@@ -1,0 +1,82 @@
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav input {
+  height: 30px;
+  width: 400px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo:hover {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f9f9;
+  filter: brightness(0.9);
+}
+
+.second-title {
+  font-weight: bold;
+  color: #8e79f4;
+}
+
+.logo-complete {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.logo-pic {
+  height: 30px;
+  width: 30px;
+}
+
+.header-link {
+  padding: 0 7px;
+}
+
+.header-link:hover {
+  border-radius: 20px;
+  background-color: #f8f9f9;
+  filter: brightness(0.9);
+}
+
+.login-btn {
+  background-color: #e1ecf4;
+  border: 1px solid #7aa7c7;
+  color: #39739d;
+  border-radius: 7px;
+  padding: 3px 13px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  filter: brightness(0.9);
+}
+
+.signup-btn {
+  background-color: #0a95ff;
+  border: 1px solid #0a95ff;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 15px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  color: white;
+  filter: brightness(0.9);
+}

@@ -1,34 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import "./App.css";
+import * as API from "./api";
+import { CreateAccountPage } from "./pages/CreateAccountPage";
+import { HomePage } from "./pages/HomePage";
+import { SignInPage } from "./pages/SignInPage";
+import { SelectCommunityPage } from "./pages/SelectCommunityPage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentUser, setCurrentUser] = useState(null);
+
+  function signIn(data: { user: any; token: string }) {
+    setCurrentUser(data.user);
+    localStorage.token = data.token;
+  }
+
+  function signOut() {
+    setCurrentUser(null);
+    localStorage.removeItem("token");
+  }
+
+  useEffect(() => {
+    if (localStorage.token) {
+      API.validate().then((data) => {
+        if (data.error) {
+          alert(data.error);
+        } else {
+          signIn(data);
+        }
+      });
+    }
+  }, []);
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route index element={<Navigate to="/homepage" />} />
+        <Route path="/homepage" element={<HomePage />} />
+
+        <Route path="/signin" element={<SignInPage signIn={signIn} />} />
+        <Route
+          path="/sign-up"
+          element={<CreateAccountPage signIn={signIn} />}
+        />
+
+        <Route path="/select-community" element={<SelectCommunityPage />} />
+
+        {/* <Route path="/profile" element={<ProfilePage />} /> */}
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

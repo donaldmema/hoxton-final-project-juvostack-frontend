@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sign-in-page {
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr;
+  height: 100vh;
+  /* width: 100vw; */
+  gap: 2rem;
+  /* margin-left: -15rem; */
+}
+
+.signin-logo {
+  margin-top: 5rem;
+  place-self: center;
+  border-radius: 20px;
+}
+
+.form-container {
+  place-self: center;
+  display: grid;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.form-container p {
+  font-size: 0.8rem;
+}
+
+.form-section {
+  display: grid;
+  height: 140px;
+  gap: 1rem;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: 500ms;
+}
+
+input:hover {
+  border: 1px solid darkcyan;
+}
+
+.sign-in-btn {
+  background-color: #0a95ff;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  filter: brightness(0.9);
+}
+
+.signin-signup-p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.signin-signup-p a {
+  color: #0a95ff;
+  text-decoration: none;
+}

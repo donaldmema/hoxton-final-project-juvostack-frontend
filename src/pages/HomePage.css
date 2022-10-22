@@ -1,0 +1,150 @@
+.homepage-container {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  height: 100%;
+  /* width: 100vw; */
+  /* margin-left: -5rem; */
+}
+
+.homepage__main {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.homepage__main-first-section {
+  height: 600px;
+  width: 99.1vw;
+
+  background-image: url(../assets/homepage-wrapper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  place-content: center;
+  color: aliceblue;
+}
+
+.homepage__main-first-section h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+.homepage__main-first-section p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.main__signup-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.main__login-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.main__signup-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: lightgray 0px 0px 4px;
+}
+
+.main__login-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 1px 2px lightsteelblue;
+}
+
+.btns-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.homepage__main-second-section {
+  height: 500px;
+  /* width: 100vw; */
+
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  place-content: center;
+  gap: 10rem;
+}
+
+.homepage__main-second-section h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.productivity-p {
+  width: 400px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: rgb(82, 82, 82);
+  text-align: center;
+}
+
+.homepage__main-second-section div {
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+}
+
+.homepage__main-third-section {
+  height: 500px;
+  background-color: white;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  place-content: center;
+  gap: 10rem;
+}
+
+.homepage__main-third-section h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.knowledge-p {
+  width: 400px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: rgb(82, 82, 82);
+  text-align: center;
+}
+
+.homepage__main-third-section div {
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+}
