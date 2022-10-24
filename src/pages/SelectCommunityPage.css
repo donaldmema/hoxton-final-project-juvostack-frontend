@@ -1,0 +1,60 @@
+.select-community-page-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(../assets/code.jpg);
+  background-size: cover;
+  background-position: end;
+}
+
+.communities-section {
+  place-self: center;
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-top: 10rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+
+  backdrop-filter: blur(15px);
+}
+
+.communities-section h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 2rem;
+}
+
+.keyword-colored {
+  color: #8e79f4;
+}
+
+.communities-section button {
+  background-color: inherit;
+  display: grid;
+  width: 100%;
+  place-content: center;
+  border: 1px solid #e0e0e0;
+  color: royalblue;
+  transition: 350ms;
+}
+
+.communities-section button:hover {
+  background-color: #f8f9fe;
+}
+
+.select-community-p {
+  padding-top: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.select-community-p button {
+  color: #8e79f4;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 350ms;
+}

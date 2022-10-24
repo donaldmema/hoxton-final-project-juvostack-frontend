@@ -4,7 +4,7 @@ import logo from "../assets/layer.png";
 
 export function HpNavBar() {
   return (
-    <nav>
+    <nav className="homepage-nav-container">
       <Link to={"/homepage"} className="logo logo-complete">
         <img src={logo} alt="JuvoStack Logo" className="logo-pic" />
         <span className="first-title">Juvo</span>

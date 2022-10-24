@@ -1,0 +1,9 @@
+.signedin-navbar.questions {
+  position: fixed;
+}
+
+.signedin-navbar {
+  width: 99.6vw;
+  border-bottom: 2px solid #e0e0e0;
+  border-top: 3px solid #f48225;
+}
